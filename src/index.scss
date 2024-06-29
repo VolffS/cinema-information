@@ -1,0 +1,16 @@
+body {
+  font-family: Roboto, sans-serif;
+  background-color: #09090b;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+  }
+}
+

@@ -1,0 +1,52 @@
+
+
+.content__movies {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(150px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  justify-items: center;
+  padding-bottom: 40px;
+
+  @media screen and (max-width: 1230px) {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  @media screen and (max-width: 450px) {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  @media screen and (max-width: 350px) {
+    grid-template-columns: repeat(1, minmax(120px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+.block-page-navigation {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap:.5rem
+}
+.page-navigation {
+
+  width: 1.5rem;
+  background: rgba(255, 255, 255, 0);
+  border: none;
+  filter: invert(100%);
+
+  &:hover {
+    filter: invert(60%);
+  }
+  &:active {
+    filter: invert(30%);
+  }
+}
+.page-forward {
+  transform: rotateZ(270deg);
+}
+.page-back {
+  transform: rotateZ(90deg);
+}

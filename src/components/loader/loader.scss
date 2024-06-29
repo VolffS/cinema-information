@@ -1,0 +1,47 @@
+
+.loader-background {
+  position: absolute;
+  z-index: 4;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(9, 9, 11);
+  border-radius: 1rem;
+  pointer-events: none;
+}
+
+.loading-container {
+  padding: 0.5rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-spinner {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: .6rem solid #8fd6fa;
+  border-radius: 50%;
+  animation: spin 0.5s linear infinite;
+}
+
+.all-space {
+  width: clamp(5rem, 40vw, 25rem);
+  height: clamp(5rem, 40vw, 25rem);
+}
+
+.mini-size {
+  width: clamp(3rem, 8vw, 13rem);
+  height: clamp(3rem, 8vw, 13rem);
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

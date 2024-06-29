@@ -1,0 +1,13 @@
+#error-page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+
+  &> * {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,165 @@
+$--Heading3: 1.3rem;
+
+.about-movie {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 3rem;
+}
+
+@media screen and (max-width: 970px) {
+  .about-movie {
+    flex-wrap: wrap;
+  }
+  .movie__information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .short-description__title {
+    align-self: start;
+  }
+  .movie__title {
+    text-align: center;
+  }
+
+}
+
+.movie-img {
+  position: relative;
+  min-width: 17rem;
+
+  .movie-card__rating {
+    margin: .5rem 0 0 .5rem;
+    scale: 1.2;
+  }
+}
+
+.movie__poster {
+  background: #424242;
+  max-width: 17rem;
+  width: 100%;
+}
+
+.movie__title {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.movie__btn-favorites {
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  font-size: 1rem;
+  margin: .5rem;
+  padding: .5rem 1rem;
+  border: none;
+  border-radius: 1rem;
+  font-weight: 600;
+  color: black;
+  background-repeat: no-repeat;
+  background-size: 201%;
+  transition: .5s;
+
+  & > * {
+    margin: 0;
+  }
+
+  &:hover {
+
+    .btn-favorites__img {
+      transition: .5s;
+    }
+  }
+}
+
+.active-favorit {
+  background-position: 0 100%;
+  background-image: linear-gradient(90deg, #4f8f02 50%, #b92918 50%, #b92918 100%);
+
+  &:hover {
+    color: black;
+    background-position: 100% 100%;
+
+    .btn-favorites__img {
+      filter: invert(0);
+    }
+  }
+}
+
+.disable-favorit {
+  background-image: linear-gradient(90deg, #4f8f02 50%, #ffffff 50%, #ffffff 100%);
+  background-position: 100% 100%;
+
+  &:hover {
+    color: white;
+    background-position: 0 100%;
+
+    .btn-favorites__img {
+      filter: invert(100%);
+    }
+  }
+}
+
+.btn-favorites__img {
+  transition: .5s;
+  width: 1rem;
+}
+
+.short-description__title {
+  font-size: $--Heading3;
+  font-weight: 600;
+}
+
+.movie__age-rating {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.movie__short-description {
+  display: grid;
+  grid-template-columns: minmax(120px, 220px)minmax(120px, 320px);
+  grid-template-rows: repeat(auto-fit, 1fr);
+
+  & > * {
+    margin: .5rem 0;
+  }
+}
+
+.movie__description {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.description__title {
+  font-size: $--Heading3;
+  font-weight: 600;
+  margin: 0;
+}
+
+.movie__actors {
+  display: flex;
+  min-width: 100%;
+  overflow-x: auto;
+  margin-top: 1rem;
+  gap: .6rem;
+  word-break: break-word;
+}
+
+.actors-card {
+  display: grid;
+  max-width: 6rem;
+}
+
+.actors__photo {
+  width: 6rem;
+  height: 9rem;
+  border-radius: 1rem;
+}
+
+.actor-name {
+  text-align: center;
+  margin: 0;
+}

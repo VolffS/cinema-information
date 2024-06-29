@@ -1,0 +1,24 @@
+.main__content {
+  padding: 3rem;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 30rem;
+  max-width: 1320px;
+  position: relative;
+}
+
+.favorites-movie {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+
+  .dropdown-menu {
+    max-height: 15rem;
+    width: 100%;
+
+  }
+}
