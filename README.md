@@ -1,30 +1,51 @@
-# React + TypeScript + Vite
+# Много страничное React приложение "КиноИнформация"
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Для работы приложения необходимо получить ключ для Api ["Кинопоиск API"](https://kinopoisk.dev)
+Ключ можно получить здесь: https://kinopoisk.dev
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+Чтобы запустить "КиноИнформация" нужно:
+1) Скачать репозиторий.
+2) В папке с репозиторием создать `.env` файл и создать переменную окружения. Пример можно просмотреть в файле `env-examle.txt`.
 ```
+VITE_API_KEY="Ваш Ключ"
+```
+3) Установить все зависимости. `npm install`
+4) Запустить React приложение. `npm dev`
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+## Представление "КиноИнформация"
+
+React приложение "КиноИнформация" представляет собой многостраничное приложение с возможностями поиска кино по фильтрам и просмотра их описания и последующим добавления в избранное.
+
+### Для каждого фильма на главной странице предоставлена информация:
+1. Постер
+2. Название
+3. Год выпуска
+4. Рейтинг
+
+![img.png](public/img.png)
+
+### При переходе на фильм будет доступна информация:
+1. Постер
+2. Название
+3. Описание
+4. Рейтинг
+5. Дату выхода
+6. Список жанров
+7. Актёры
+
+![img_1.png](public/img_1.png)
+
+### Для поиска чего конкретного пользуйтесь фильтром.
+
+И найдите что-нибудь себе по душе и не стеснйтесь.
+
+![img.png](public/img_2.png)
+
+### Понравившееся фильмы можно добавить в избранное.
+
+Просмотреть избранное кино можно на отдельном окне.
+
+![img_1.png](public/img_4.png)
+
+**Не бойтесь потерять их они сохранятся у вас в браузере!**

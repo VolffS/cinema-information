@@ -58,11 +58,14 @@ export const MovieList = () => {
 
     return (
         <>
-            <FiltersList genres={genres} btnApplyFilter={() => setPageMovie(1)}/>
+            <div className="content">
+                <FiltersList genres={genres} btnApplyFilter={() => setPageMovie(1)}/>
 
-            <div className="content__movies">
-                {memoMovie.map((movie) => <MovieCard key={movie.id} movie={movie}/>)}
+                <div className="content__movies">
+                    {memoMovie.map((movie) => <MovieCard key={movie.id} movie={movie}/>)}
+                </div>
             </div>
+
             <div className="block-page-navigation">
                 <button className="page-navigation page-back" onClick={()=>btnHandlerPageMovie(-1)}>
                     <img src={arrowSvg} alt=""/>

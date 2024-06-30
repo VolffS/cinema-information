@@ -1,4 +1,15 @@
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
 
+@media screen and (max-width: 880px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .content__movies {
   display: grid;

@@ -74,7 +74,6 @@ export const FiltersList = ({genres, btnApplyFilter}: { genres: Genres[], btnApp
                     <div className="filter__input">
                         <InputFilter value={isFilters ? filters.year[0] : ""} maxLength={4} placeholder={"От 1990"}
                                      refComponent={inputYearStart}/>
-                        <p className="">-</p>
                         <InputFilter value={isFilters ? filters.year[1] : ""} maxLength={4} placeholder={"До 2024"}
                                      refComponent={inputYearEnd}/>
                     </div>
@@ -85,13 +84,14 @@ export const FiltersList = ({genres, btnApplyFilter}: { genres: Genres[], btnApp
                     <div className="filter__input">
                         <InputFilter value={isFilters ? filters.rating[0] : ""} maxLength={1} placeholder={"От 0"}
                                      refComponent={inputRatingStart}/>
-                        <p className="">-</p>
                         <InputFilter value={isFilters ? filters.rating[1] : ""} maxLength={2} placeholder={"До 10"}
                                      refComponent={inputRatingEnd}/>
                     </div>
                 </div>
-                <button className="btn btn-filter" onClick={btnHandlerActiveFilter}>Применить</button>
-                {isFilters && <button className="btn btn-filter" onClick={btnHandlerDisableFilter}>Отмена</button>}
+                <div className="filter-control">
+                    <button className="btn btn-filter" onClick={btnHandlerActiveFilter}>Применить</button>
+                    {isFilters && <button className="btn btn-filter back-filter" onClick={btnHandlerDisableFilter}>Отмена</button>}
+                </div>
             </div>
         </div>
     )
